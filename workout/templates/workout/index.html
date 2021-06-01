@@ -1,0 +1,10 @@
+{% if workout_list %}
+    <ul>
+    {% for workout in workout_list %}
+        <li><a href="{% url 'detail' workout.id %}">
+            {{workout.post_date}}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No workouts are posted.</p>
+{% endif %}
